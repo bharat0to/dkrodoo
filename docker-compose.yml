@@ -1,21 +1,21 @@
 version: '3.1'
 services:
   web:
-    image: odoo:15
-    command: odoo --dev reload,qweb,werkzeug,xml -d sulaba --db-filter sulaba -init
+    image: odoo:16
+    command: odoo --dev reload,qweb,werkzeug,xml -d sulaba7 --db-filter sulaba7 -init
     depends_on:
       - db
     ports:
-      - "8069:8069"
+      - "8070:8069"
     volumes:
       - odoo-web-data:/var/lib/odoo
       - ./addons:/mnt/extra-addons
       - ./odoo.conf:/etc/odoo/odoo.conf
-      - ./odoo:/usr/lib/python3/dist-packages/odoo
+      # - ./odoo:/usr/lib/python3/dist-packages/odoo
   db:
     image: postgres:13
     ports:
-      - "5432:5432"
+      - "5433:5432"
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_PASSWORD=odoo

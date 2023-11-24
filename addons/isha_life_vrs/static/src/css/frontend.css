@@ -1,0 +1,309 @@
+main {
+  background-color: #fffcf6;
+}
+
+.col-lg-12 > .teacher-bottom-line {
+  margin-bottom: 20px;
+}
+.profile-image {
+    width: 262px;
+    height: 265px;
+    border-radius: 3px;
+    margin-top:-150px;
+    margin-left:130px;
+    border: solid px #fffcf6;
+  }
+
+.profile-name {
+    font-family: WF-028154-010913-000050;
+    font-size: 36px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    
+    text-align: center;
+    color: #101010;
+  }
+
+.profile-div{
+  margin-top:-100px;
+  margin-left:450px;
+
+} 
+
+.prof-Heading {
+  font-family: WF-028154-010913-000007;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #7e7e7e;
+}
+.profile-text {
+  font-family: WF-028154-010913-000007;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #434343;
+}
+
+.Profile-Heading {
+  font-family: WF-028154-010913-000021;
+  font-size: 26px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  margin-top:50px;
+  letter-spacing: normal;
+  color: #252525;
+}
+
+.profile-blogo {
+  width: 165px;
+  height: 165px;
+  border-radius: 3px;
+  border: solid 1px #cfcfcf;
+  background-color: #d8d8d8;
+}
+
+.profile-sub-heading {
+  font-family: WF-028154-010913-000007;
+  font-size: 22px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #484848;
+}
+
+.profile-Header-Box-Backround {
+  border-radius: 3px;
+  background-color: #ece6d9;
+}
+
+.profile-View-more {
+  border-radius: 3px;
+  text-align: center;
+  border: solid 1px #ece6d9;
+  background-color: #f9f6ef;
+}
+
+.web-login-background {
+  background-image: url(/isha_life_vrs/static/src/img/password-change-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-warning123 {
+  background-color: #eae2ab00;
+  color: #fffffff2;
+}  
+
+.Change-Password {
+  font-family: WF-028154-010913-000007;
+  font-size: 22px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.65px;
+  padding-top: inherit;
+  padding-bottom: inherit;
+  text-align: center;
+  color: #444444;
+}
+
+
+.Web-change-button-Background {
+  color: white;
+  border-radius: 2.2px;
+  width: 332.2px;
+  align: center;
+  border-radius: 2.2px;
+  background-color: #d87f26;
+}
+
+.profile-view-edit {
+  width: 90px;
+  height: 16px;
+  font-family: FedraSansStd;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  margin-top:5px;
+  color: #db7f12;
+  }
+
+.profile-view-namaskaram {
+  font-family: WF-028154-010913-000050;
+  font-size: 30px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  padding-right:10px;
+  letter-spacing: normal;
+  margin-top:20px;
+  text-align:center;
+  color: #101010;
+}
+
+
+.profile-card-footer {
+  font-family: FedraSansStd;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.Cancel {
+    background-color: white;
+    color: black;
+  }
+  
+.Cancel:hover {background-color: #e7e7e7;}
+  
+.profile-card-footer-rectangle {
+  background-color: #ede9db;
+  
+}
+
+.change-password-background {
+  background-image: url(/bb_student/static/src/img/password-change-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.teachers-row {
+  /* width: 1440px; */
+  height: 64px;
+  background-color: #f4efe6;
+}
+
+.Teachers-card-heading {
+  width: 74px;
+  height: 18px;
+  font-family: WF-028154-010913-000007;
+  font-size: 28px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #595959;
+}
+
+.card-footer {
+  /* padding: 0.75rem 1.25rem; */
+  background-color: #ede9db;
+  border-top: px solid rgba(255, 241, 7, 0.125);
+}
+
+.teacher-loadmore {
+  color: #e08218;
+  background-color: #f7f7f7;
+  border-color: #e08218;
+}
+
+
+.teacher-bottom-line {
+  border-bottom: 3px solid #d87f26;
+  width: 120px;
+}
+
+.teachers-font-update{
+  font-family: WF-028154-010913-000021;
+
+}
+.text-orange{
+
+  color: #e08218;
+}
+.Itlian-Font{
+  font-family: WF-028154-010913-000008;
+}
+.Region-card-heading{
+  /* width: 50px; */
+  /* height: 18px; */
+  font-family: WF-028154-010913-000007;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #595959;
+  
+}
+.RC-text-muted {
+  color: #665747 !important;
+  font-family: WF-028154-010913-000007;
+  font-size: 13px;
+}
+.agreement-font-color {
+  /* width: 117.5px;
+  height: 16px; */
+  font-family: FedraSansStd;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #83a363;
+}
+
+.ps-Reflections {
+  /* background-image: url(/bb_student/static/src/img/yoga.png);
+  background-repeat: no-repeat;
+  background-size: 30% 100%;
+  background-position: bottom right;
+  object-fit: contain;
+  opacity: 0.51; */
+  position: absolute;
+  /* width: auto;
+  height: 16rem; */
+  right: 5rem;
+  bottom: 0;
+}
+.PS-Upayoga{
+  background-image: url(/bb_student/static/src/img/Upayoga.svg);
+  background-repeat: no-repeat;
+  text-align: left;
+  object-fit: contain;
+}
+.PS-Angamardana{
+  background-image: url(/bb_student/static/src/img/Angamardana.svg);
+  background-repeat: no-repeat;
+  object-fit: contain;
+  text-align: left;
+}
+.PS-Yogasanas{
+  background-image: url(/bb_student/static/src/img/Yogasana.svg);
+  background-repeat: no-repeat;
+  text-align: left;
+  /* width: 100%; */
+  /* height: 24px; */
+  object-fit: contain;
+  bottom: 0;
+
+}
+.PS-SuryaKriya{
+  background-image: url(/bb_student/static/src/img/SuryaKriya.svg);
+  background-repeat: no-repeat;
+  text-align: left;
+}

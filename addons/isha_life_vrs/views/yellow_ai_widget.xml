@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+     <template id="yellow_ai_widget_in_request" name="Yellow AI Widget">
+     <h1> Welcome to Isha Life Chatbot</h1>
+            <script type="text/javascript">
+                window.ymConfig={"bot":"x1670331102723","host":"https://cloud.yellow.ai","payload":{}};(function () {var w=window,ic=w.YellowMessenger;if("function"===typeof ic)ic("reattach_activator"),ic("update",ymConfig);else{var d=document,i=function(){i.c(arguments)};function l(){var e=d.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://cdn.yellowmessenger.com/plugin/widget-v2/latest/dist/main.min.js";var t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}i.q=[],i.c=function(e){i.q.push(e)},w.YellowMessenger=i,l()}})();
+                window.addEventListener("load", function() {
+                    window.YellowMessengerPlugin.init({ 
+                        payload: { 
+                            session_id: "<t t-esc="request.session.sid"/>"
+                        },
+                        triggerJourney: "vrs-test_tewdrl"
+                    });
+                    addButtonObserver();
+                });
+                window.addEventListener('message', function(eventData) {
+                    if (event.origin !== window.location.origin) throw new Error("Message not allowed");
+                    try {
+                        const e = JSON.parse(eventData.data)
+                        if(e.event_code === 'custom-event')
+                            if(e.data.code === 'vrs_goto_home_event') {
+                                const ymIframe = document.getElementById('ymIframe');
+                                ymIframe.contentWindow.document.getElementsByClassName('new-home-button')[0].click()
+                            }
+                    }catch(e) {
+                        console.log("YM MSG ERR: ", e)
+                    }
+                })
+                function addButtonObserver() {
+                    var observer = new MutationObserver(function(mutationsList, observer) {
+                        mutationsList.forEach(function(mutation) {
+                            if (mutation.addedNodes &amp;&amp; mutation.addedNodes.length > 0) {
+                                var addedNode = mutation.addedNodes[0];
+                                    console.log("MUTATION: ", addedNode.nodeName, addedNode.classList)
+                                if ((addedNode.nodeType === 1) &amp;&amp; addedNode.classList.contains('filePrompt')) {
+                                    addButton()
+                                }
+                            }
+                        });
+                    });
+                    var iframe = document.getElementById('ymIframe');
+                    var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+                    observer.observe(iframeDocument, { childList: true, subtree: true, attributes: false, characterData: false });
+                }
+                function addButton() {
+                    var iframe = document.getElementById('ymIframe')
+                    var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+                    var iframeButton = iframeDocument.querySelector(".filePromptAttachment");
+
+                    if (iframeButton) {
+                    
+                        var newButton = iframeDocument.createElement("button");
+                        newButton.setAttribute("tabindex", "0");
+                        newButton.setAttribute("data-testid", "ym-home-button");
+                        newButton.setAttribute("title", "Restart Conversation");
+                        newButton.setAttribute("data-i18n-title", "title.restartConversation");
+                        newButton.setAttribute("aria-label", "restart conversation");
+                        newButton.className = "new-home-button";
+                        newButton.style.position = "absolute";
+                        newButton.style.bottom = "10px";
+                        newButton.style.left = "25px";
+
+                        var iconElement = document.createElement("i");
+                        iconElement.className = "ri-home-4-fill";
+
+                        var textContentElement = document.createElement("div");
+                        textContentElement.className = "home-button-text-content hide";
+                        textContentElement.textContent = "Home";
+
+                        newButton.appendChild(iconElement);
+                        newButton.appendChild(textContentElement);
+
+                        var button1 = iframeDocument.querySelector(".filePromptAttachment");
+                        iframeDocument.getElementsByClassName('filePromptOption')[0].appendChild(newButton);
+                        iframeDocument.getElementsByClassName('filePromptOption')[0].appendChild(button1);
+                        
+
+                        newButton.addEventListener("click", function() {
+                            const ymIframe = document.getElementById('ymIframe');
+                            ymIframe.contentWindow.document.getElementsByClassName('new-home-button')[0].click()
+                            
+                        });
+
+                    }                
+                }
+                console.log("ADDED EV:")
+            </script>
+    </template>
+   
+</odoo>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+    <record id="vendor_excep_exp_email_template" model="mail.template">
+      <field name="name">Vendor Exception Expired Email</field>
+      <field name="email_from">${object.primary_dep_id.dept_email if object.primary_dep_id.dept_email else object.company_id.email}</field>
+      <field name="subject">Your Exception will expire in 3 days</field>
+      <field name="email_to">${(object.email)}</field>
+      <field name="email_cc">${object.get_email_to()}</field>
+      <field name="model_id" ref="isha_life_vrs.model_res_partner"/>
+      <field name="auto_delete" eval="True"/>
+      <field name="body_html">
+        <![CDATA[
+        <pre style="font-family:georgia;font-size:14">
+        Namaskaram ${(object.name)},
+
+            Your exception will expire in 3 days. Please provide the required documents at the earliest.
+
+        Pranam,
+        Isha Outreach Team
+
+        </pre>
+
+        ]]>
+      </field>
+    </record>
+  </data>
+  <data noupdate="1">
+    <record id="vendor_create_update_success_failed_template" model="mail.template">
+      <field name="name">Vendor Bot Creation Success Template</field>
+      <field name="email_from">vrs.bot@ishafoundation.org</field>
+      <field name="model_id" ref="isha_life_vrs.model_res_partner"/>
+      <field name="auto_delete" eval="True"/>
+      <field name="body_html" type="html">
+        <pre style="font-family:georgia;font-size:14">
+          Namaskaram,
+          
+          <t t-esc="ctx.get('message')" />
+          
+          Pranam,
+          YM Bot
+        </pre>
+      </field>
+    </record>
+  </data>
+</odoo>
