@@ -44,7 +44,6 @@
         'views/email_templates.xml',
         'views/in_pincode_state.xml',
         'views/yellow_ai_widget.xml',
-               'views/test.xml',
         'views/partner_view.xml',
     ],
     'assets': {

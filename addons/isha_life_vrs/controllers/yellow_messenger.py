@@ -6,6 +6,7 @@ from odoo import http, Command
 from odoo.http import request, Controller
 import requests
 import logging
+import json 
 
 _logger = logging.getLogger(__name__)
 
@@ -94,9 +95,9 @@ class YellowMessenger(Controller):
 
     @http.route('/api/ym/check_dup_on_email_phone', type='json', auth='public', csrf='*')
     def check_dup_on_email(self, **kw):
-        email = http.request.jsonrequest.get('email')
-        name = http.request.jsonrequest.get('name')
-        phone = http.request.jsonrequest.get('phone')
+        email = json.loads(request.httprequest.data).get('email')
+        name = json.loads(request.httprequest.data).get('name')
+        phone = json.loads(request.httprequest.data).get('phone')
         entity = 0
         if email:
             email_dup = do_dup_check_on('email', email, [('name', '=ilike', name)])
@@ -110,10 +111,10 @@ class YellowMessenger(Controller):
 
     @http.route('/api/check_dup_on_gst', type='json', auth='user', csrf='*')
     def check_dup_on_gst(self, **kw):
-        gstin = http.request.jsonrequest['gstin']
+        gstin = json.loads(request.httprequest.data)['gstin']
         d = do_dup_check_on('vat', gstin, [('is_company', '=', True)])
         if not d['duplicate']:
-            vendor_id = http.request.jsonrequest.get('vendor_id')
+            vendor_id = json.loads(request.httprequest.data).get('vendor_id')
             if vendor_id and dup_old_vat_check(vendor_id, gstin):
                 return { 'duplicate': False }
             d = do_dup_check_on('old_vat', gstin, [('is_company', '=', True)])
@@ -121,7 +122,7 @@ class YellowMessenger(Controller):
 
     @http.route('/api/ym/check_dup_on_vendor', type='json', auth='user', csrf='*')
     def check_dup_on_pan(self, **kw):
-        data = http.request.jsonrequest
+        data = json.loads(request.httprequest.data)
         entity = data.get('entity') # email, pan_no, vat, account_number
         value = data.get('value')
         if entity and value:
@@ -133,14 +134,14 @@ class YellowMessenger(Controller):
     
     @http.route("/api/ym/pincode_to_state", type='json', auth='user', csrf='*')
     def pincode_to_state(self, **kw):
-        pincode = http.request.jsonrequest['pincode']
+        pincode = json.loads(request.httprequest.data)['pincode']
         return {
             'state_names': request.env['in.pincode.state'].sudo().search([('pincode', '=', pincode)]).mapped('state_name')
         }
 
     @http.route('/api/ym/verify_vendor', type='json', methods=['POST'], auth='user', csrf='*')
     def verify_vendor(self, **kw):
-        data = http.request.jsonrequest
+        data = json.loads(request.httprequest.data)
         entity = data['entity']
         value = data['value']
         domain = None 
@@ -162,7 +163,7 @@ class YellowMessenger(Controller):
     
     @http.route('/api/ym/vendor_has_gst', type='json', methods=['GET'], auth='user', csrf='*')
     def vendor_has_gst(self, **kw):
-        data = http.request.jsonrequest
+        data = json.loads(request.httprequest.data)
         vendor = request.env['res.partner'].sudo().browse(data['vendor_id'])
         if vendor.exists():
             return { 'has_gst': bool(vendor.vat) }
@@ -200,7 +201,7 @@ class YellowMessenger(Controller):
     @http.route(['/api/ym/new_vendor'], type='json', auth='user', csrf='*')
     def new_vendor(self, **kw):
         try:
-            data = http.request.jsonrequest
+            data = json.loads(request.httprequest.data)
             _logger.info(f"YM_API new_vendor: , {kw} - {data}")
             drafted_response = None
             idfy_name_score = data['idfy_name_score'] if data.get('idfy_name_score') else -1
@@ -310,7 +311,7 @@ class YellowMessenger(Controller):
     @http.route(['/api/ym/update_vendor'], type='json', auth='user', csrf='*')
     def update_vendor(self, **kw):
         try:
-            data = http.request.jsonrequest
+            data = json.loads(request.httprequest.data)
             _logger.info(f"YM_API DATA: , {json.dumps(data, indent=4)}")
             vendor_id = data['vendor_id']
             vendor = request.env['res.partner'].sudo().browse(vendor_id)
