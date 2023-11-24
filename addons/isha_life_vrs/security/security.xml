@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record model="ir.module.category" id="module_category_invoicing">
+        <field name="name">Vendor Invoicing</field>
+        <field name="description">Helps you handle your accounting needs, if you are not an accountant, we suggest you to install only the Invoicing.</field>
+        <field name="sequence">7</field>
+    </record>
+
+    <record id="group_finance_manager" model="res.groups">
+        <field name="name">Finance Manager</field>
+        <field name="category_id" ref="module_category_invoicing"/>
+        <field name="implied_ids" eval="[(4,ref('website_slides.group_website_slides_officer'))]"/>
+        <field name="users" eval="[(4,ref('base.user_admin'))]"/>
+        <field name="comment">
+            Finance Manager can approve or reject Vendor On-boarding requests.
+        </field>
+    </record>
+<!--    <record id="group_finance_controller" model="res.groups">-->
+<!--        <field name="name">Finance Controller</field>-->
+<!--        <field name="users" eval="[(4,ref('base.user_admin'))]"/>-->
+<!--        <field name="comment">-->
+<!--            Finance Controller can approve or reject Vendor On-boarding requests.-->
+<!--        </field>-->
+<!--    </record>-->
+    <record id="group_finance_user" model="res.groups">
+        <field name="name">Finance User</field>
+        <field name="category_id" ref="module_category_invoicing"/>
+        <field name="users" eval="[(4,ref('base.group_user'))]"/>
+        <field name="comment">
+            Finance User can only view Vendors.
+        </field>
+    </record>
+    <record id="group_finance_incharge" model="res.groups">
+        <field name="name">Finance Incharge</field>
+        <field name="category_id" ref="module_category_invoicing"/>
+        <field name="users" eval="[(4,ref('base.user_admin'))]"/>
+        <field name="comment">
+            Finance Incharge can create and edit Vendor requests.
+        </field>
+    </record>
+    <record id="group_dept_user" model="res.groups">
+        <field name="name">Department Finance User</field>
+        <field name="category_id" ref="module_category_invoicing"/>
+        <field name="users" eval="[(4,ref('base.user_admin'))]"/>
+        <field name="comment">
+            Department Users can create Vendor requests.
+        </field>
+    </record>
+    <record id="group_isha_company_editor_user" model="res.groups">
+        <field name="name">Isha Company(s) Editor User</field>
+        <field name="category_id" ref="module_category_invoicing"/>
+        <field name="users" eval="[(4,ref('base.user_admin'))]"/>
+        <field name="comment">
+           Isha Company(s) Editor User only can edit the isha compmay names which is there in the res.partner and is_isha_company is enabled
+        </field>
+    </record>
+
+ <menuitem name="Accounting"
+            id="account.menu_finance"
+            groups="isha_life_vrs.group_finance_incharge,isha_life_vrs.group_finance_manager"
+            web_icon="account,static/description/icon.png"
+            sequence="40"/>
+
+
+<!--<record id="vendor_event_rule_my" model="ir.rule">
+    <field name="name">Own events</field>
+    <field ref="model_res_partner" name="model_id"/>
+    <field name="domain_force">[('department_ids','in', [x.id for x in user.department_ids])]</field>
+    <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+</record>-->
+    </data>
+</odoo>

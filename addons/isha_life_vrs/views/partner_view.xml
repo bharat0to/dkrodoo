@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+       <record model="ir.ui.view" id="partner_view_extended">
+            <field name="name">partner.view.extended</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="priority" eval="120"/>
+            <field name="arch" type="xml">
+               <xpath expr="//notebook" position="inside">
+                    <page name="proofs" string="Proof of Ids">
+                        <field name="proof_ids">
+                            <tree create="1" editable="bottom" delete="1">
+                                <field name="idproof_document_type" options='{"no_create":1, "no_open":1}' force_save="1" />
+                                <field name="attached_file" widget="many2many_binary" force_save="1" />
+
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+
+                 <!-- <xpath expr="//field[@name='category_id']" position="after">
+                    <br/>
+                    <br/>
+                    <separator string="PAN Details"></separator>
+                    <br/>
+                    <br/>
+                    <field widget="mask" data-inputmask-mask="AAAAA9999A" name="pan_no"/>
+                    <field name="old_pan_no"/>
+                    <field widget="radio" options="{'horizontal': true}" name="is_registered_with_msme" />
+                    <br/>
+                    <br/>
+                    <separator string="Other Details"></separator>
+                    <br/>
+                    <br/>
+                    <field name="is_isha_company" groups="isha_vrs.group_isha_company_editor_user"/>
+                        <field name="vendor_type_detail" />
+                    <field name="is_cash_vendor"/>
+                    <field name="primary_dep_id"/>
+                    <field name="department_ids" widget="many2many_tags"/>
+                    <field name="service_type_ids" widget="many2many_tags"/>
+                    <field name="declaration_acceptance"/>
+                    <field name="declaration_text"/>
+                </xpath> -->
+            </field>
+        </record>
+    
+
+    </record>
+
+    </data>
+</odoo>

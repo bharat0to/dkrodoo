@@ -1,0 +1,129 @@
+/* PE - Profile Edit */
+
+.PE-Rectangle {
+    /* width: 1440px; */
+    /* height: 5634px; */
+    background-color: #fffcf6;
+}
+
+.Namaskaram-Alexander {
+  font-family: WF-028154-010913-000050;
+  font-size: 30px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  padding-right: 10px;
+  letter-spacing: normal;
+  margin-top: 20px;
+  text-align: center;
+  color:
+  #101010;
+
+}
+
+.PE-Public {
+  font-family: FedraSansStd;  
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #434343;
+  padding: 0;
+  border: none;
+  background: none;
+}
+.PE-Edit-btn {
+  width: 154px;
+  height: 47px;
+  border-radius: 3px;
+  border: solid 1px #db7f12;
+
+}
+.PE-Edit {
+  /* width: 60px; */
+  height: 32px;
+  font-size: 16px;
+  font-family: WF-028154-010913-000050;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #db7f12;
+  border: solid 1px #db7f12;
+  background: transparent;
+}
+.PE-text-muted {
+  color: #6c757d !important;
+  font-family: WF-028154-010913-000007;
+  font-size: 18px;
+}
+.PE-Upload {
+
+  width: 162px;  
+  height: 38px;  
+  border-radius: 3px;  
+  background-color: #db7f12;
+
+}
+.PE-Personal-Details {
+  /* width: 212px; */
+  /* height: 26px; */
+  font-family: FedraSansStd;
+  font-size: 26px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #252525;
+}
+
+.PE-Oval {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  color: #db7f12;
+}
+
+.PE-Rectangle-Copy-6 {
+  border-radius: 3px;
+  background-color: #f2eadb;
+}
+
+.PE-Mandatory-color {
+  background-color: #fff5e9;
+}
+.Bold{
+  font-family: WF-028154-010913-000050;
+}
+.Normal{
+  font-family: WF-028154-010913-000007;
+}
+
+.PE-Nav-Box {
+  /* width: 600px;
+  height: 36px; */
+  font-family: WF-028154-010913-000007;
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  padding-right:10px;
+  letter-spacing: normal;
+  margin-top:20px;
+  text-align:center;
+
+}
+.img-thumbnail-card {
+  /* padding: 0.25rem; */
+  background-color: #FFFFFF;
+  /* border: 1px solid #dee2e6; */
+  border-radius: 0.25rem;
+  max-width: 100%;
+  height: auto;
+}

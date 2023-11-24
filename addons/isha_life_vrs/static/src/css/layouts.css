@@ -1,0 +1,415 @@
+.bg-orange {
+  color: white;
+  border-radius: 2.2px;
+  width: 100%;
+  background-color: #d87f26;
+}
+body {
+  font-family: WF-028154-010913-000007;
+}
+
+.Log-in {
+  font-family: WF-028154-010913-000050;
+  font-size: 33px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #444444;
+}
+
+.SearchBarinput {
+  width: 100%;
+  height: 50px;
+  border: none;
+  padding: 5px 10px;
+}
+
+.search-btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  background-color: #f5f5f5;
+}
+
+.btn-search {
+  color: white;
+  border-radius: 2.2px;
+  float: right;
+  background-color: #d87f26;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 40%;
+  font-family: WF-028154-010913-000050;
+  font-weight: 600;
+}
+
+.search_section {
+  width: 80% !important;
+  padding: 15px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.dropdown-item:active {
+  color: black;
+  text-decoration: none;
+  background-color: #ffeed9;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  color: #16181b;
+  text-decoration: none;
+  background-color: #ffeed9;
+}
+
+@media screen and (max-width: 600px) {
+  .search_section {
+    width: 100% !important;
+    padding: 5px;
+    border-radius: 3px;
+    display: -webkit-box;
+  }
+  .SearchBarinput {
+    width: 75%;
+    border: none;
+    padding: 5px;
+  }
+  .btn-search {
+    color: white;
+    border-radius: 2.2px;
+    float: right;
+    background-color: #d87f26;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+  }
+}
+
+.homepage main{
+  background-image: url(/isha_life_vrs/static/src/img/adiyogi_homepage.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center ;
+}
+
+.header-image {
+  background-image: url(/isha_life_vrs/static/src/img/IHYS-Triangle-Background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.o_footer {
+  background-color: #F9F9F9 !important;
+  color: #dee2e6;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #eee;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: #ffffff;
+  border-bottom: 1px solid #d87f26;
+}
+
+.navbar ul.nav>li.divider {
+  height: 2.3125rem;
+  border-right: 1px solid #d87f26;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: orange;
+}
+
+.navbar-light .navbar-nav .nav-link:focus {
+  color: lightblue;
+}
+
+.btn-info:hover {
+  color: #fff9f9;
+  background-color: #d87f26;
+  border-color: #ffffff;
+}
+
+.btn-info:not(:disabled):not(.disabled):active {
+  color: #FFFFFF;
+  background-color: #d87f26;
+  border-color: #ffffff;
+}
+
+.Web-Search-btn {
+  color: #FFFFFF;
+  border-radius: 3px;
+  background-color: #c4b8a2;
+}
+
+.Bold-font {
+  font-family: WF-028154-010913-000050;
+}
+
+.Normal-Font {
+  font-family: WF-028154-010913-000007;
+}
+
+.nav-link, .navbar-light .navbar-nav .active>.nav-link {
+  color: #d87f26;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: #d87f26;
+  text-decoration: none;
+  background-color: transparent;
+  border-bottom: 1px solid #d87f26;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.page-link:hover {
+  z-index: 2;
+  color: black;
+  text-decoration: none;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+/* WEB SLides */
+
+.list-group-item.active {
+  z-index: 2;
+  color: #FFFFFF;
+  background-color: #d87f26;
+  border-color: #ffffff;
+  font-family: WF-028154-010913-000050;
+}
+
+.btn-primary {
+  color: #FFFFFF;
+  background-color: #d87f26;
+  border-color: #ffffff;
+  font-family: WF-028154-010913-000050;
+}
+
+.btn-secondary {
+  color: #d87f26;
+  background-color: #FFFFFF;
+  border-color: #d87f26;
+  font-family: WF-028154-010913-000050;
+}
+
+.modal-title {
+  font-family: WF-028154-010913-000050;
+}
+
+.form-group {
+  font-family: WF-028154-010913-000050;
+}
+
+.col-form-label {
+  font-family: WF-028154-010913-000007;
+}
+
+.btn-primary:hover {
+  color: #FFFFFF;
+  background-color: rgb(121, 106, 106);
+  border-color: #ffffff;
+}
+
+.btn-secondary:hover {
+  color: #FFFFFF;
+  background-color: rgb(121, 106, 106);
+  border-color: #ffffff;
+}
+
+.btn-primary:active {
+  color: #FFFFFF;
+  background-color: rgb(121, 106, 106);
+  border-color: #ffffff;
+}
+
+.btn-secondary:active {
+  color: #FFFFFF;
+  background-color: rgb(121, 106, 106);
+  border-color: #ffffff;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show>.btn-primary.dropdown-toggle {
+  color: #FFFFFF;
+  background-color: rgb(121, 106, 106);
+  border-color: #ffffff;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show>.btn-secondary.dropdown-toggle {
+  color: #FFFFFF;
+  background-color: rgb(121, 106, 106);
+  border-color: #ffffff;
+}
+
+
+/*.header-image {*/
+/*display:none;*/
+/*}*/
+.o_footer_copyright {
+    color:#fff;
+    font-family: FedraSansStdLight;
+    font-size:14px;
+    opacity: 0.86;
+    background-color: #716c64;
+}
+.web-login-background{
+  height: 100%;
+  resize: both;
+  background-image: url('/isha_life_vrs/static/src/img/adiyogi_homepage.webp');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+.web-home-background {
+    height:100%;
+      /* background-image: url('/isha_life_vrs/static/src/img/adiyogi_homepage.webp'); */
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+}
+.login-text-box {
+    height: 33px;
+    font-size: 12px;
+    font-family: FedraSansStdBook;
+    background-color: #f0eae1;
+    border-radius: 5px;
+}
+.change-password-background {
+  background-image: url('/isha_life_vrs/static/src/img/adiyogi_homepage.webp');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+.Log-in {
+  font-family: IshaFont !important;
+  font-size: 72px !important;
+  font-weight: 500 !important;
+  font-stretch: normal !important;
+  font-style: normal !important;
+  line-height: normal !important;
+  letter-spacing: normal !important;
+  text-align: center !important;
+}
+.Log-in-sub {
+    font-family: FedraSansStdLight;
+    text-align:center;
+}
+.card-login{
+    background-color:#fbf9f5;
+    border-radius:0;
+}
+.Sign-in{
+    font-family: FedraSansStdMedium;
+    width:100%;
+    border: 2px solid #d04723;
+    color:#d04723;
+    border-radius:10px;
+    font-size: 0.875rem;
+}
+.Sign-in-custom{
+    font-family: FedraSansStdMedium;
+    width:100%;
+    border: 2px solid #d04723;
+    color:#d04723;
+    border-radius:10px;
+    font-size: 0.500rem;
+}
+.Sign-in-custom:hover{
+    background-color: #d04723;
+    color: #FFFFFF;
+}
+.Sign-in:hover{
+    background-color: #d04723;
+    color: #FFFFFF;
+}
+.oauth_list_custom{
+    background-color:#FFA500;
+    color:#000000;
+    font-family: FedraSansStdMedium;
+
+}
+.oauth_list_custom:hover{
+    background-color: #FFA500;
+    color:#ffffff;
+}
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+.home-page-privacy-text {
+  background-color: #000000;
+  border-radius: 4px;
+  filter: alpha(opacity=60);
+  opacity: 0.60;
+  padding: 8px;
+}
+@font-face
+{
+  font-family: "FedraSansStdBold";
+  src: url('../fonts/FedraSansStdBold.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face
+{
+  font-family: "FedraSansStdMedium";
+  src: url('../fonts/FedraSansStdMedium.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face
+{
+  font-family: "FedraSansStdBook";
+  src: url('../fonts/FedraSansStdBook.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face
+{
+  font-family: "FedraSansStdLight";
+  src: url('../fonts/FedraSansStdLight.otf');
+}
+
+@font-face
+{
+  font-family: "IshaFont";
+  src: url('../fonts/Isha font_0.ttf');
+  font-weight: normal;
+  font-style: normal;
+}

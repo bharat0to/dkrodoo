@@ -1,0 +1,49 @@
+
+@charset "UTF-8";
+
+@font-face
+{
+  font-family: "WF-028154-010913-000050";
+  src: url('fonts/WF-028154-010913-000050.eot');
+  src: url('fonts/WF-028154-010913-000050.eot?#iefix') format('embedded-opentype'), url('fonts/WF-028154-010913-000050.woff') format('woff'), url('fonts/WF-028154-010913-000050.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face
+{
+  font-family: "WF-028154-010913-000007";
+  src: url('fonts/WF-028154-010913-000007.eot');
+  src: url('fonts/WF-028154-010913-000007.eot?#iefix') format('embedded-opentype'), url('fonts/WF-028154-010913-000007.woff') format('woff'), url('fonts/WF-028154-010913-000007.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face
+{
+  font-family: "WF-028154-010913-000021";
+  src: url('fonts/WF-028154-010913-000021.eot');
+  src: url('fonts/WF-028154-010913-000021.eot?#iefix') format('embedded-opentype'), url('fonts/WF-028154-010913-000021.woff') format('woff'), url('fonts/WF-028154-010913-000021.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face
+{
+  font-family: "WF-028154-010913-000008";
+  src: url('fonts/WF-028154-010913-000008.eot');
+  src: url('fonts/WF-028154-010913-000008.eot?#iefix') format('embedded-opentype'), url('fonts/WF-028154-010913-000008.woff') format('woff'), url('fonts/WF-028154-010913-000008.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+p.WF-028154-010913-000050 { text-align: center; font-size: 28pt; font-family:"WF-028154-010913-000050"; font-weight: normal; }
+
+p.WF-028154-010913-000007 { text-align: center; font-size: 28pt; font-family:"WF-028154-010913-000007"; font-weight: normal; }
+
+p.WF-028154-010913-000021 { text-align: center; font-size: 28pt; font-family:"WF-028154-010913-000021"; font-weight: normal; }
+
+p.WF-028154-010913-000008 { text-align: center; font-size: 28pt; font-family:"WF-028154-010913-000008"; font-weight: normal; }
+
+/* body { color: #606060; padding: 100px; } */
